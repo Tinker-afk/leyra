@@ -1,7 +1,7 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
-    let user = message.mentions.users.first();
+    let user = message.mentions.users.first() || message.author 
     let embed = new Discord.RichEmbed()
     .setDescription("Информация о участнике")
     .setColor('#2F3136')
